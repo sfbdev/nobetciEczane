@@ -1,0 +1,172 @@
+﻿$main-color: #8338ec;
+$light-color: #dfe5ef;
+$dark-color: #0b032d;
+
+body{
+  background-color: #dfe5ef87;
+  font-size: 14px;
+  font-family: 'Sora', sans-serif;
+  max-height: 100vh;
+}
+.wrapper{
+  .content-area{
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    height: 80vh;
+    margin: 0 auto;
+    margin-top: 10vh;
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.30);
+
+    .left{
+      width: 55%;
+      padding: 0 1rem;
+      overflow-y: scroll;
+      .header{
+        display: flex;
+        align-items: center;
+        &-logo{
+          margin-right: 1rem;
+          .logo{
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: $main-color;
+          }
+        }
+        .header-list{
+          &-item{
+            &-link{
+              padding: 0px 0.5rem;
+            }
+          }
+        }
+      }
+      .content{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+      }
+      .top{
+        display: flex;
+        justify-content: space-between;
+        .search{
+          position: relative;
+          input{
+            background-color: $light-color;
+            outline: none;
+            opacity: 0.6;
+            width: 250px;
+            padding-left: 40px;
+          }
+          i{
+            position: absolute;
+            top: 17px;
+            left: 10px;
+          }
+        }
+        .filter{
+          display: flex;
+          justify-content: space-between;
+          .city, .district{
+            position: relative;
+            width: 175px;
+            i{
+              position: absolute;
+              font-size: 1rem;
+              color: $main-color;
+              top: 17px;
+              left: 10px;
+            }
+            select{
+              width: 100%;
+              padding: 5px;
+              padding-left: 30px;
+            }
+          }
+          .city{
+            margin-right: 0.5rem;
+          }
+        }
+      }
+      .bottom{
+        margin-top: 1rem;
+        .result{
+          &-list{
+            display: flex;
+            flex-direction: column;
+            &-item{
+              display: flex;
+              flex-direction: column;
+              border-bottom: 1px solid $light-color;
+              padding: 1rem 0;
+              width: 100%;
+              .more{
+                margin-top: .5rem;
+                a{
+                  background-color: $main-color;
+                  color: #ffffff;
+                  padding:10px 5px;
+                  border-radius: 4px;
+                  display: inline-block;
+                  border: 1px solid transparent;
+                  &:hover{
+                    color: $main-color;
+                    border-color: $main-color;
+                    background-color: #ffffff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .right{
+      width: 45%;
+      padding: 0 1rem;
+
+      .map{
+        max-height: 100%; //will change
+        overflow: hidden;
+        img{
+          background-size: cover;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+//helps
+ul{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  color: $dark-color;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+    color: $main-color;
+  }
+}
+
+input, select{
+  height: 50px;
+  box-shadow: 0px 0 10px 0 rgba(0,0,0,.1);
+  border: 1px solid #dedede;
+  outline: none;
+
+}
+
+input{
+  padding: 5px;
+}
